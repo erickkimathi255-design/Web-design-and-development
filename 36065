@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web design and administration on html linking sections within a document.</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Link styles */
+        .nav-links {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .nav-links a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Section styles */
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .section h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        /* Target styling for when a section is navigated to */
+        .section:target {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .nav-links a {
+                display: block;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Document Navigation </h1>
+        
+        <div class="nav-links">
+            <p>Use these links to navigate to different sections:</p>
+            <a href="#section_one">Section One</a>
+            <a href="#section_two">Section Two</a>
+            <a href="#section_three">Section Three</a>
+            <a href="filetwo.html#section_two">Filetwo - Section Two</a>
+            <a href="filetwo.html#section_three">Filetwo - Section Three</a>
+        </div>
+        
+        <div id="section_one" class="section">
+            <h2>Section One</h2>
+            <p>This is the content of section one. When you click on the "Section One" link above, the page will scroll to this section.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <div id="section_two" class="section">
+            <h2>Section Two</h2>
+            <p>This is the content of section two. Notice how the styling changes when you navigate to this section using the link.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        
+        <div id="section_three" class="section">
+            <h2>Section Three</h2>
+            <p>This is the content of section three. The last two links in the navigation point to sections in another file (filetwo.html).</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> The links to "Filetwo - Section Two" and "Filetwo - Section Three" would navigate to another HTML file. In this example, those files don't exist, so the links won't work.</p>
+        </div>
+    </div>
+</body>
+</html>
+```

@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+
+. <HEAD> <TITLE>web design and development on html forms</TITLE> </HEAD> 
+<H1><FONT SIZE="5" COLOR="coral" style="background-color:lightblue;"">Land Of Boxes Order Form</FONT></H1> 
+<BODY style="background-color:lightblue;> <FORM METHOD="post" ACTION=mailto:name@xyz.co.za> <TABLE style="background-color:lightgray;"> <TR> <TD ALIGN="right">Name:</TD> 
+  <TD><INPUT TYPE="text" NAME="name" SIZE="35"></TD> </TR> <TR> <TD ALIGN="right">Email:</TD> 
+    <TD><INPUT TYPE="text" NAME="email" SIZE="35" VALUE=""></TD> </TR> <TR> <TD ALIGN="right">Address:</TD> 
+      <TD><TEXTAREA NAME="address" COLS="30" ROWS="5"></TEXTAREA></TD> </TR> <TR> <TD ALIGN="right">Postcode:</TD> 
+        <TD>
+          <INPUT TYPE="text" NAME="postcode" SIZE="20"></TD> </TR> </TABLE><BR><BR> <TABLE BORDER=1> <TR> <TD><B>Product</B></TD> <TD><B>Part Number</B></TD> <TD><B>Quantity</B></TD> 
+            <TD><B>Unit Price</B></TD> <TD><B>Subtotal</B></TD> </TR> <TR> <TD>EconoBox</TD><TD>LB100</TD> <TD><INPUT type="text" name="Qlb100" size="8"></TD><TD>R5</TD> <TD><INPUT type="text" name="Sublb100" size="15" value="R"></TD> </TR> 
+              
+              <TR> <TD>Standard Box</TD><TD>LB200</TD> <TD><INPUT type="text" name="Qlb200" size="8"></TD><TD>R10</TD> <TD><INPUT type="text" name="Sublb200" size="15" value="R"></TD> </TR> <TR> <<TD>Premium Box/TD><TD>LB300</TD> <hr>HTML Forms  <TD><INPUT type="text" name="Qlb300" size="8"></TD><TD>R15</TD> 
+                <TD><INPUT type="text" name="Sublb300" size="15" value="R"></TD>  </TR>  <TR>  <TD>Deluxe Box/TD><TD>LB400</TD>  <TD><INPUT type="text" name="Qlb400" size="8"></TD><TD>R20</TD>  <TD><INPUT type="text" name="Sublb400" size="15" value="R"></TD>  </TR>  <TR>  <TD>Super Deluxe Box/TD><TD>LB500</TD>  <TD><INPUT type="text" name="Qlb500" size="8"></TD><TD>R30</TD>  <TD><INPUT type="text" name="Sublb500" size="15" value="R"></TD>  </TR>  
+                  <TR>  <TD COLSPAN=5 ALIGN="right">  Total: <INPUT type="text" name="total" size="15" value="R"></TD>  </TR>  </TABLE><hr><BR><BR>  <B>Credit Card Details</B><BR>  <TABLE style="background-color:lightgray;">  <TR>  <TD>Card Type:</TD>  </TR>  <TR>  <TD><INPUT type="radio" name="cardmake"  value="master">Mastercard</TD>  <TD>Card Number:</TD>  <TD>vINPUT type="text" name="cardnumber" size="20"></TD>  </TR>  <TR>  <TD><INPUT type="radio" name="cardmake" value="visa">Visa</TD>  
+                    <TD>Expiry date:</TD>  <TD><INPUT type="text" name="expiry" size="10" maxlength="5"  value="mm/yy"></TD  </TR>  <TR>  <TD><INPUT type="radio" name="cardmake" value="amex">American  Express</TD>  </TR>  <TR>   <TD><INPUT  type="radio"  name="cardmake"  value="diners">Diners  Club</TD>  </TR>  </TABLE><BR><BR>TD>Premium Box/TD><TD>LB300</TD>
+                      <TD>Premium Box/TD><TD>LB300</TD> HTML Forms  <TD><INPUT type="text" name="Qlb300" size="8"></TD><TD>R15</TD>  <TD><INPUT type="text" name="Sublb300" size="15" value="R"></TD>  </TR>  <TR>  <TD>Deluxe Box/TD><TD>LB400</TD>  <TD><INPUT type="text" name="Qlb400" size="8"></TD><TD>R20</TD>  <TD><INPUT type="text" name="Sublb400" size="15" value="R"></TD>  </TR>  <TR>  <TD>Super Deluxe Box/TD><TD>LB500</TD> 
+                        <TD><INPUT type="text" name="Qlb500" size="8"></TD><TD>R30</TD>  <TD><INPUT type="text" name="Sublb500" size="15" value="R"></TD>  </TR>  <TR>  <TD COLSPAN=5 ALIGN="right">  Total: <INPUT type="text" name="total" size="15" value="R"></TD>  </TR>  </TABLE><hr>
+                        </TABLE><BR><BR>
+                        <TABLE> <TR> <TD ALIGN="right"><B>Delivery Address:</B></TD> <TD><TEXTAREA NAME="delivery" COLS="25" ROWS="5"></TEXTAREA></TD> </TR> </TABLE><BR><BR> <INPUT type style="background-color:red;"="submit" name="submit" value="Send order"> <INPUT type style="background-color:green;"="reset" name="reset" value="Clear form"> </FORM> </BODY>
+</html>
+          

@@ -1,0 +1,5 @@
+<HTML> <HEAD> 
+  <TITLE>  web design and development on HTML color Table Design </TITLE> 
+  <style> table, th, td {   border: 1px solid black;   } </style>  </HEAD> 
+  <BODY>   <TABLE style= "width: 80%" align = "center">   <caption> Some HTML colors </caption>   <tr >    <th width = 150 style="background-color:lightblue;"> Color</th>    <th width = 150 style="background-color:lightblue;"> Name</th>    <th width = 150 style="background-color:lightblue;"> Hexadecimal</th>    <th width = 150 style="background-color:lightblue;">RGB Value</th>   </tr>   <tr >    <td bgcolor = "fa8072"> </td>    <td style="background-color:lightgray;"> Salmon</td>    <td style="background-color:lightgray;" > fa8072 </td>    <td style="background-color:lightgray;"> 250-128-114 </td>   </tr>   <tr >    <td bgcolor = "ffd700"> </td>   
+    <td style="background-color:lightgray;"> Gold</td>    <td style="background-color:lightgray;"> ffd700 </td>    <td style="background-color:lightgray;" > 255-215-0 </td>   </tr>   </TABLE>  </BODY > </HTML >
