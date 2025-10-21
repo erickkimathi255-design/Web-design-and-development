@@ -1,0 +1,247 @@
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device"><title>web design and administration on html on multi-iframes on a webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4a6ee0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #3a5eca;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .iframe-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .iframe-wrapper {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .iframe-wrapper:hover {
+            transform: translateY(-5px);
+        }
+
+        .iframe-header {
+            padding: 15px 20px;
+            background-color: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .iframe-title {
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .iframe-actions button {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            background-color: #64748b;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .iframe-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Multi-Iframe Dashboard</h1>
+            <p class="subtitle">Monitor multiple web resources in one place</p>
+        </header>
+
+        <div class="controls">
+            <button id="refreshAll">Refresh All</button>
+            <button id="toggleLayout">Toggle Layout</button>
+            <button id="fullscreenMode">Fullscreen Mode</button>
+        </div>
+
+        <div class="iframe-container">
+            <div class="iframe-wrapper">
+                <div class="iframe-header">
+                    <span class="iframe-title">Wikipedia</span>
+                    <div class="iframe-actions">
+                        <button class="refresh-btn">Refresh</button>
+                    </div>
+                </div>
+                <iframe src="https://en.wikipedia.org/wiki/Main_Page" title="Wikipedia"></iframe>
+            </div>
+
+            <div class="iframe-wrapper">
+                <div class="iframe-header">
+                    <span class="iframe-title">GitHub</span>
+                    <div class="iframe-actions">
+                        <button class="refresh-btn">Refresh</button>
+                    </div>
+                </div>
+                <iframe src="https://github.com" title="GitHub"></iframe>
+            </div>
+
+            <div class="iframe-wrapper">
+                <div class="iframe-header">
+                    <span class="iframe-title">MDN Web Docs</span>
+                    <div class="iframe-actions">
+                        <button class="refresh-btn">Refresh</button>
+                    </div>
+                </div>
+                <iframe src="https://developer.mozilla.org/en-US/" title="MDN Web Docs"></iframe>
+            </div>
+
+            <div class="iframe-wrapper">
+                <div class="iframe-header">
+                    <span class="iframe-title">Stack Overflow</span>
+                    <div class="iframe-actions">
+                        <button class="refresh-btn">Refresh</button>
+                    </div>
+                </div>
+                <iframe src="https://stackoverflow.com" title="Stack Overflow"></iframe>
+            </div>
+        </div>
+
+        <footer>
+            <p>Multi-Iframe Dashboard &copy; 2023 | All external content belongs to their respective owners</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Refresh all iframes
+            document.getElementById('refreshAll').addEventListener('click', function() {
+                const iframes = document.querySelectorAll('iframe');
+                iframes.forEach(iframe => {
+                    iframe.src = iframe.src;
+                });
+            });
+
+            // Toggle layout between grid and single column
+            document.getElementById('toggleLayout').addEventListener('click', function() {
+                const container = document.querySelector('.iframe-container');
+                container.classList.toggle('single-column');
+                
+                if (container.classList.contains('single-column')) {
+                    container.style.gridTemplateColumns = '1fr';
+                    this.textContent = 'Grid Layout';
+                } else {
+                    container.style.gridTemplateColumns = 'repeat(auto-fit, minmax(400px, 1fr))';
+                    this.textContent = 'Single Column';
+                }
+            });
+
+            // Fullscreen mode for iframes
+            document.getElementById('fullscreenMode').addEventListener('click', function() {
+                const iframeWrappers = document.querySelectorAll('.iframe-wrapper');
+                iframeWrappers.forEach(wrapper => {
+                    wrapper.style.height = wrapper.style.height === '80vh' ? 'auto' : '80vh';
+                });
+                
+                if (iframeWrappers[0].style.height === '80vh') {
+                    this.textContent = 'Normal View';
+                } else {
+                    this.textContent = 'Fullscreen Mode';
+                }
+            });
+
+            // Individual iframe refresh buttons
+            document.querySelectorAll('.refresh-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const iframe = this.closest('.iframe-wrapper').querySelector('iframe');
+                    iframe.src = iframe.src;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+``
